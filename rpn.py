@@ -1,4 +1,5 @@
 #!/usr/bin/env  python3
+import math
 
 def calculate(arg):
     stack = []
@@ -15,6 +16,8 @@ def calculate(arg):
                 result = val1 + val2
             elif token == '-':
                 result = val2 - val1
+            #elif token == '^'
+            #    result = math.pow(val1,val2)
 
             stack.append(result)
 
