@@ -22,6 +22,8 @@ def calculate(arg):
             elif token == '^':
                 result = operator.pow(val2,val1)
 #            print(colored('result','green'))
+            elif token == '*':
+                result = val1*val2
             stack.append(result)
 
     if len(stack) > 1:
