@@ -1,6 +1,8 @@
 #!/usr/bin/env  python3
 import math
 import operator
+import sys
+from termcolor import colored,cprint
 
 def calculate(arg):
     stack = []
@@ -10,8 +12,21 @@ def calculate(arg):
     tokens = arg.split()
 
     for token in tokens:
+        if token == '+':
+    	    print("operator: ")
+    	    cprint(token,'green')
+        elif token == '-':
+    	    print("operator: ")
+    	    cprint(token,'green')
+        elif token == '^':
+    	    print("operator: ")
+    	    cprint(token,'green')
+        elif token == '*':
+    	    print("operator: ")
+    	    cprint(token,'green')
         try:
             stack.append(int(token));
+
         except ValueError:
             val1 = stack.pop()
             val2 = stack.pop()
@@ -32,8 +47,13 @@ def calculate(arg):
 
 def main():
     while True:
-        calculate(input("rpn calc> "))
-        print(result)
+        result = calculate(input("rpn calc> "))
+        if result < 0:
+        	print("result: ")
+        	cprint(result,'red')
+        else:
+        	print("result: ")
+        	print(result)
 
 if __name__ == '__main__':
     main()
