@@ -6,6 +6,7 @@ install:
         - pip install pytest-cov
         - pip install coveralls
 script:
-        - python3 -m unittest
+        - make test
+        - coverage run test_rpn.py
 after_success:
         -coveralls
