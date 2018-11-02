@@ -6,6 +6,6 @@ install:
         - pip install pytest-cov
         - pip install coveralls
 script:
-        - py.test coveralls/make test 
+        - python3 -m unittest
 after_success:
         -coveralls
