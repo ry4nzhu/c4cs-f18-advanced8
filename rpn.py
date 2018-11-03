@@ -24,6 +24,9 @@ def calculate(arg):
         elif token == '*':
     	    print("operator: ")
     	    cprint(token,'green')
+        elif token == '/':
+            print("operator: ")
+            cprint(token,'green')
         try:
             stack.append(int(token));
 
@@ -36,9 +39,10 @@ def calculate(arg):
                 result = val2 - val1
             elif token == '^':
                 result = operator.pow(val2,val1)
-#            print(colored('result','green'))
             elif token == '*':
                 result = val1*val2
+            elif token == '/':
+                result = val2/val1
             stack.append(result)
 
     if len(stack) > 1:
